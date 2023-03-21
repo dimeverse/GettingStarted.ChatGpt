@@ -36,3 +36,12 @@ C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\obj\Debug\net7.0\refint\G
 C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\obj\Debug\net7.0\GettingStarted.ChatGpt.pdb
 C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\obj\Debug\net7.0\GettingStarted.ChatGpt.genruntimeconfig.cache
 C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\obj\Debug\net7.0\ref\GettingStarted.ChatGpt.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\silic\Documents\GitHub\GettingStarted.ChatGpt\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll

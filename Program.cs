@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Net.Http;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
 using System.Text;
 using Newtonsoft.Json;
 string[] inputs = new string[1];
-inputs[0] = "What command do you use to list all docker images";
+inputs[0] = "What is rhino?";
 if (inputs.Length > 0)
 {
-
     HttpClient client = new HttpClient();
-    client.DefaultRequestHeaders.Add("authorization", "Bearer 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");
+    client.DefaultRequestHeaders.Add("authorization", $"Bearer {apiKey}");
     string stringContent = "{\"model\": \"text-davinci-001\", \"prompt\": \"" + inputs[0] + "\",\"temperature\": 1,\"max_tokens\": 100}";
     var content = new StringContent(stringContent, Encoding.UTF8, "application/json");
     HttpResponseMessage response = await client.PostAsync("https://api.openai.com/v1/completions", content);
@@ -16,8 +17,9 @@ if (inputs.Length > 0)
     try
     {
         var dyData = JsonConvert.DeserializeObject<dynamic>(responseString);
+        var guess = GuessCommand(dyData!.choices[0].text);
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"---> API response is: {dyData!.choices[0].text}");
+        Console.WriteLine($"\n---> API response is: {guess}\n");
         Console.ResetColor();
     }
     catch (System.Exception ex)
@@ -29,4 +31,17 @@ if (inputs.Length > 0)
 else
 {
     Console.WriteLine("---> you need to provide some inputs first");
+}
+static string GuessCommand(string raw)
+{
+    Console.WriteLine("---> GPT-3 API Returned Text:");
+    Console.ForegroundColor = ConsoleColor.Yellow;
+    Console.WriteLine(raw);
+
+    var lastIndex = raw.LastIndexOf("\n");
+    string guess = raw.Substring(lastIndex + 1);
+
+    Console.ResetColor();
+    TextCopy.ClipboardService.SetText(guess);
+    return guess;
 }
