@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Text;
-
+using Newtonsoft.Json;
 
 if (args.Length > 0)
 {
@@ -14,7 +14,9 @@ if (args.Length > 0)
     string responseString = await response.Content.ReadAsStringAsync();
     try
     {
-
+        var dyData = JsonConvert.DeserializeObject<dynamic>(responseString);
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"---> API response is: {dyData!.choices[0].text}");
     }
     catch (System.Exception ex)
     {
