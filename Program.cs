@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Net.Http;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Json;
 using System.Text;
 using Newtonsoft.Json;
 string[] inputs = new string[1];
