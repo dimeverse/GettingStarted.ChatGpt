@@ -4,7 +4,6 @@ using System.Text;
 using Newtonsoft.Json;
 string[] inputs = new string[1];
 inputs[0] = "What command do you use to list all docker images";
-
 if (inputs.Length > 0)
 {
 
