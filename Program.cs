@@ -1,9 +1,10 @@
-﻿using System;
-using System.Net.Http;
-using System.Text;
+﻿using System.Text;
 using Newtonsoft.Json;
+
+
 string[] inputs = new string[1];
 inputs[0] = "What is rhino?";
+
 if (inputs.Length > 0)
 {
     string apiKey = Environment.GetEnvironmentVariable("apiKey")!;
