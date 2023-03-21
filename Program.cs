@@ -8,6 +8,7 @@ string[] inputs = new string[1];
 inputs[0] = "What is rhino?";
 if (inputs.Length > 0)
 {
+    string apiKey = Environment.GetEnvironmentVariable("apiKey");
     HttpClient client = new HttpClient();
     client.DefaultRequestHeaders.Add("authorization", $"Bearer {apiKey}");
     string stringContent = "{\"model\": \"text-davinci-001\", \"prompt\": \"" + inputs[0] + "\",\"temperature\": 1,\"max_tokens\": 100}";

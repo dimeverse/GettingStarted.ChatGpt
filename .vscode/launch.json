@@ -12,6 +12,9 @@
       // If you have changed target frameworks, make sure to update the program path.
       "program": "${workspaceFolder}/bin/Debug/net7.0/GettingStarted.ChatGpt.dll",
       "args": [],
+      "env": {
+        "apiKey": "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"
+      },
       "cwd": "${workspaceFolder}",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
       "console": "internalConsole",
