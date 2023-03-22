@@ -2,13 +2,15 @@
 
 // create one argument/prompt
 string[] inputs = new string[1];
-inputs[0] = "What is rhino?";
-string model = "text-davinci-001";
+string query = "hi, I did implement you in my console app for text completion. Now how can I implement you inside grasshopper/rhino3d and make you aware of my grasshopper definition objects and algorithm for a certain process ??";
+inputs[0] = query;
+
+string model = "text-davinci-003";
 
 if (inputs.Length > 0)
 {
     // create request body parameters string content
-    var stringContent = OpenAIUtils.CreateChatRequestBodyContent(model, inputs[0], 1, 100);
+    var stringContent = OpenAIUtils.CreateChatRequestBodyContent(model, inputs[0], 1, 1000);
     string responseString = await OpenAIUtils.InvokeChatAsync(stringContent);
 
     // try to parse the response string to a json
